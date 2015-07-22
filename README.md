@@ -1,0 +1,2 @@
+# slackhistorybot
+Slack History Bot
