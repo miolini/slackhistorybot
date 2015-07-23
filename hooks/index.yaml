@@ -1,0 +1,12 @@
+indexes:
+- kind: message
+  properties:
+  - name: TeamId
+  - name: TeamDomain
+  - name: ChannelId
+  - name: ChannelName
+  - name: Timestamp
+    direction: desc
+  - name: UserId
+  - name: UserName
+  - name: Text
