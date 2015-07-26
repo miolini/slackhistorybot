@@ -34,9 +34,12 @@ func handleSlackOutgoing(rw http.ResponseWriter, req *http.Request) {
 		jsonReplyMap(rw, http.StatusInternalServerError, "error", err.Error())
 		return
 	}
-	if msg.UserName != "slackbot" && strings.Contains(strings.ToLower(msg.Text), "пщ") {
+
+	// Disabled
+	if false && msg.UserName != "slackbot" && strings.Contains(strings.ToLower(msg.Text), "пщ") {
 		jsonReplyMap(rw, 200, "text", fmt.Sprintf("@%s: не ПЩ, а Go!\nhttps://pbs.twimg.com/media/B3-o2B4CMAANNH3.png:large", msg.UserName))
 	} else {
 		jsonReplyMap(rw, 200, "msg", msg, "key", key)
 	}
+
 }

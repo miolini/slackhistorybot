@@ -13,7 +13,7 @@ type MessageSearch struct {
 	Timestamp   time.Time
 	UserId      search.Atom
 	UserName    search.Atom
-	Text        string
+	Text        search.HTML
 }
 
 func MessageSearchFromMessage(msg Message) MessageSearch {
@@ -25,6 +25,6 @@ func MessageSearchFromMessage(msg Message) MessageSearch {
 	msgSearch.Timestamp = msg.Timestamp
 	msgSearch.UserId = search.Atom(msg.UserId)
 	msgSearch.UserName = search.Atom(msg.UserName)
-	msgSearch.Text = msg.Text
+	msgSearch.Text = search.HTML(msg.Text)
 	return msgSearch
 }

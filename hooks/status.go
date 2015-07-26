@@ -5,7 +5,7 @@ import (
 	"appengine/datastore"
 	"appengine/search"
 	"net/http"
-	"time"
+	// "time"
 )
 
 type StatusResponse struct {
@@ -14,7 +14,7 @@ type StatusResponse struct {
 }
 
 func handleStatus(rw http.ResponseWriter, req *http.Request) {
-	ts := time.Now()
+	// ts := time.Now()
 
 	c := appengine.NewContext(req)
 
